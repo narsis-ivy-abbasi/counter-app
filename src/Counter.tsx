@@ -6,7 +6,7 @@ export default function Counter() {
   return (
     <div style={{ textAlign: "center" }}>
       <h1>{count}</h1>
-      <button onClick={() => setCount(count - 1)}>-</button>
+      <button onClick={() => setCount(Math.max(0, count - 1))}>-</button>
       <button onClick={() => setCount(0)}>Reset</button>
       <button onClick={() => setCount(count + 1)}>+</button>
     </div>
